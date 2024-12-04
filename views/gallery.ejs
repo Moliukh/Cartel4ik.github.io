@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про нас</a>
+      <a href="/services">Послуги</a>
+      <a href="/gallery">Галерея</a>
+      <a href="/contact">Контакти</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Галерея виконаних робіт</h1>
+    <div class="gallery">
+      <% images.forEach(image => { %>
+        <div class="gallery-item">
+          <img src="/uploads/<%= image %>" alt="Фото">
+        </div>
+      <% }); %>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Cartel Bud Group. Всі права захищені.</p>
+  </footer>
+</body>
+</html>

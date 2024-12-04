@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Послуги</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .service-description {
+      display: none;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #333;  /* Темно-сірий фон */
+      color: white;  /* Білий текст */
+      border-radius: 5px;
+    }
+    
+    .service-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      text-align: left;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .service-button:hover {
+      background-color: #45a049;
+    }
+
+    .service-description p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про нас</a>
+      <a href="/services">Послуги</a>
+      <a href="/gallery">Галерея</a>
+      <a href="/contact">Контакти</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Наші Послуги</h1>
+    <div class="service-item">
+      <button class="service-button" onclick="toggleDescription('demo')">1. Демонтажні роботи</button>
+      <div id="demo" class="service-description">
+        <p>- Демонтаж старих конструкцій (стіни, перегородки, перегородки з гіпсокартону).</p>
+        <p>- Зняття старих підлогових покриттів (ламінат, плитка, паркет).</p>
+        <p>- Демонтаж вікон, дверей, вітражів.</p>
+        <p>- Видалення старої сантехніки (раковини, ванни, унітази).</p>
+        <p>- Демонтаж електропроводки та розеток.</p>
+        <p>- Видалення старої плитки та обробки стін.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <button class="service-button" onclick="toggleDescription('building')">2. Будівельні роботи</button>
+      <div id="building" class="service-description">
+        <p>- Зведення стін (цегляних, блокових, каркасних, гіпсокартонних).</p>
+        <p>- Будівництво перегородок (гіпсокартон, блоки, цегла).</p>
+        <p>- Укладання плит перекриття.</p>
+        <p>- Монтаж фундаментів (стрічковий, монолітний, плита).</p>
+        <p>- Будівництво дахів (скатні, плоскі дахи, мансарди).</p>
+        <p>- Ремонт і реконструкція фасадів будівель.</p>
+        <p>- Установка вікон та дверей.</p>
+        <p>- Монтаж сходів, балконів, лоджій.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <button class="service-button" onclick="toggleDescription('repair')">3. Ремонтні роботи</button>
+      <div id="repair" class="service-description">
+        <p>- Косметичний ремонт: фарбування стін, стель, поклейка шпалер.</p>
+        <p>- Капітальний ремонт: перепланування, заміна стін, перегородок, покриттів.</p>
+        <p>- Ремонт ванних кімнат: заміна сантехніки, монтаж плитки, гідроізоляція.</p>
+        <p>- Ремонт кухонь: монтаж кухонних меблів, плитки, сантехніки.</p>
+        <p>- Укладання підлогових покриттів (плитка, паркет, ламінат, ковролін).</p>
+        <p>- Оздоблення стін (штукатурка, шпаклівка, фарбування, обклеювання шпалерами).</p>
+        <p>- Встановлення натяжних стель або побілка.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <button class="service-button" onclick="toggleDescription('mounting')">4. Монтажні роботи</button>
+      <div id="mounting" class="service-description">
+        <p>- Монтаж дверей і вікон (в тому числі пластикових і дерев'яних).</p>
+        <p>- Установка сантехніки (раковини, ванни, унітази, душові кабіни).</p>
+        <p>- Монтаж електропроводки та освітлення.</p>
+        <p>- Встановлення систем опалення (радіатори, котли, трубопроводи).</p>
+        <p>- Монтаж кондиціонерів та вентиляційних систем.</p>
+        <p>- Установка побутової техніки (мікрохвильові печі, холодильники, пральні машини).</p>
+        <p>- Монтаж меблів та інших конструкцій (шафи, полиці, стелажі).</p>
+        <p>- Установка водопроводу та каналізації.</p>
+      </div>
+    </div>
+
+    <!-- Add the rest of the services here in similar structure -->
+  </main>
+  <footer>
+    <p>&copy; 2024 Cartel Bud Group. Всі права захищені.</p>
+  </footer>
+
+  <script>
+    function toggleDescription(id) {
+      var description = document.getElementById(id);
+      if (description.style.display === "block") {
+        description.style.display = "none";
+      } else {
+        description.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
